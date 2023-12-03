@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: "cowsay"
+  config:
+    additional-location: "/etc/cowsay"
+    import: "file:/tmp/cowsay/default_settings.yml"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - prometheus

@@ -1,0 +1,9 @@
+services:
+  nginx:
+   image: nginx
+   ports:
+    - 8081:80
+   volumes:
+    - ./conf:/etc/nginx/conf.d/
+    - ./repository:/usr/share/nginx/html/repository
+    - ./teacher:/usr/share/nginx/html/teacher
