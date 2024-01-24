@@ -25,10 +25,11 @@ class CowsayController(
             "CI/CD - continuous irritation / continuous disappointment =)",
             "Why would a DevOps go to Mars? - To Terraform it",
             """
-            A DevOps engineer walks into a bar, 
-            puts the bartender in a docker container, 
-            put Kubernetes behind the bar, spins up 1000 bartenders,
-            orders 1 beer.    
+            A DevOps walks into a bar 
+            puts the bartender in a container 
+            put K8s behind the bar
+            spins up 100 bartenders
+            orders 1 beer
             """.trimIndent()
         ).random()
         return cowService.say(message)
