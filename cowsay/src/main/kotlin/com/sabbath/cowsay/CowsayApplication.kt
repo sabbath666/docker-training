@@ -8,12 +8,7 @@ import javax.annotation.PostConstruct
 
 @SpringBootApplication
 class CowsayApplication {
-    @PostConstruct
-    fun init() {
-        val javaVersion = System.getProperty("java.vendor")
-        if (!(javaVersion.equals("bellsoft", true)))
-            throw RuntimeException("Wrong Java vendor!! Please use JDK or JRE by Bellsoft")
-    }
+
 }
 
 fun main(args: Array<String>) {

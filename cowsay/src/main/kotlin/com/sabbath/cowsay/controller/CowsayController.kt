@@ -9,25 +9,27 @@ class CowsayController(
     val cowService: CowService
 ) {
 
-    @GetMapping("/hi")
+    @GetMapping("/")
     fun sayHi():String {
         val message= listOf(
-            "Делай хорошо, а плохо не делай",
-            "Ну что там по задачам?",
-            "Напиши еще служебок и съешь этих мягких французких булочек",
-            "Проблема не нашей стороне",
-            "Ну, привед",
-            "Х Х и в продакшн",
-            "Давайте ночью соберемся потестируем",
-            "Дропни ка базу",
-            "Я тебе покушать принес",
-            "НЕТ - безопасника ответ",
-            "Разработаю твой бэкенд ;)",
-            "Разработаю твой фронтенд ;)",
-            "Маленький сервис - это норма",
-            "Давай делай бэкап",
-            "Не деплой меня в пятницу",
-            "МУ-МУ"
+            "Hi there",
+            """
+            Junior: Where is the documentation 
+            Senior: I am the documentation    
+            """.trimIndent(),
+            """
+             - It works on my machine 
+             - Then we'll ship your machine
+             That is how Docker was born   
+            """.trimIndent(),
+            "CI/CD - continuous irritation / continuous disappointment =)",
+            "Why would a DevOps go to Mars? - To Terraform it",
+            """
+            A DevOps engineer walks into a bar, 
+            puts the bartender in a docker container, 
+            put Kubernetes behind the bar, spins up 1000 bartenders,
+            orders 1 beer.    
+            """.trimIndent()
         ).random()
         return cowService.say(message)
     }
